@@ -1,0 +1,54 @@
+
+page page5 {
+    header[
+        title: "tasneem"; language: "en" ;
+    ]
+    body[
+
+            Start Form:action(controller("post.php"));
+                  input:radio(label(getList("gender_list")), name("gender") , placeholder("enter .."));
+
+                  input:image_in(name("image") , max(10));
+                  Enter Enter
+                  input:submit(label("Submit Form 1") , width(20));
+
+            End Form
+            output:paragraph(label(getList("language_list")) , max(7));
+            output:button(label(getVar("button")) , alt("some thing"));
+    ]
+
+}
+
+controller controller5 control page5 {
+
+    var x = 0  ;
+    list array = ( "boshra" , "hamze" , 1);
+    print(item);
+
+    function fun1()[]
+    function fun1()[]
+    function fun2(name , age)[]
+    var x = 0 ;
+
+        for(i -> 30 , +2)[
+
+            print("Hello" , x );
+        ]
+
+    var s = array.size() ;
+    list array = (1 , 2 , 3 , 4 , 5 );
+    var item = array.get(9) ;
+    print(item);
+
+    if("compiler" == 1 && 1 == 1 || x == 0 || arr.size() > 0 || array > 1)[
+
+    ]
+
+    function f1()[
+        if(x == 0)
+        [
+            print("true");
+        ]
+    ]
+
+}

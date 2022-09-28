@@ -1,0 +1,75 @@
+page page{
+    header[
+        title: "tasneem"; language: "en" ;
+    ]
+    body[
+            get:data(controller("controller.php"));
+
+            output:header1(label(getList("language_list")));
+            output:header1(label(getVar("header")));
+
+            output:paragraph(label(getList("language_list")));
+            output:paragraph(label(getVar("hello_var")));
+
+            output:image_out(src(getVar("source")), alt(getVar("alt")), width(getVar("w")), height(getVar("h")));
+
+            output:link(url(getVar("link")), label(getVar("google_label")));
+
+            output:button(label(getVar("button")));
+
+            output:button(label(getVar("button")), url(getVar("link")));
+
+
+            Start Form:action(controller("post.php"));
+
+                  input:text(label("First Name"), name("fname"), placeholder("Enter Your First Name"), maxlength("10"), minlength("5"));
+                  Enter Enter
+                  input:text(label("Last Name"), name("lname"), placeholder("Enter Your Last Name"), maxlength("10"), minlength("5"), required("false"));
+                  Enter Enter
+                  input:email(label("E-mail"), name("email"), placeholder("Enter Your E-mail"), readonly("false"), required("false"));
+                  Enter Enter
+                  input:password(label("Password"), name("password"), minlength("6"));
+                  Enter Enter
+                  input:number(label("Age"), name("Age"), placeholder("Enter your Age"), max("90"), min("18"), step("2"));
+                  Enter Enter
+
+
+                  output:paragraph(label("Gender"));
+                  input:radio(label(getList("gender_list")), name("gender"));
+
+                  output:paragraph(label("Programing language you know"));
+                  input:checkbox(label(getList("language_list")), name("language"));
+
+
+                  output:paragraph(label("Enter Your Image"));
+                  input:image_in(name("image"));
+                  Enter Enter
+                  input:submit(label("Submit Form 1"));
+                  Enter Enter
+
+            End Form
+        ]
+}
+
+
+
+
+controller controller control page{
+
+var header = "This IS Header";
+var hello_var = "Hello";
+
+list language_list = ("php", "html", "c++", "java");
+list gender_list = ("Female", "Male");
+
+var source = "C:\Users\Tasneem\Desktop\LOGO\1.jpg";
+var alt = "alternative text";
+var w = 100;
+var h = 80;
+var link = "https://www.google.com";
+var google_label = "Google";
+var button = "This is Button";
+
+
+
+}
